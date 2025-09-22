@@ -1,7 +1,10 @@
 import { Waves, AlertTriangle, Map, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const ReportButton = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-8 py-8">
       {/* Central Wave Icon */}
@@ -22,6 +25,7 @@ const ReportButton = () => {
       {/* Main Report Button */}
       <Button 
         size="lg"
+        onClick={() => navigate("/report")}
         className="w-full max-w-sm h-16 bg-gradient-ocean hover:bg-primary-hover text-white font-semibold text-lg rounded-2xl shadow-wave transition-all duration-300 hover:scale-105 mb-6"
       >
         <AlertTriangle className="w-6 h-6 mr-3" />
