@@ -1,10 +1,13 @@
 import { FileText, Bell, Settings } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const BottomNavigation = () => {
+  const navigate = useNavigate();
+  
   const navItems = [
-    { icon: FileText, label: "My Reports", active: false },
-    { icon: Bell, label: "Notifications", active: false },
-    { icon: Settings, label: "Settings", active: false },
+    { icon: FileText, label: "My Reports", active: false, path: "/my-reports" },
+    { icon: Bell, label: "Notifications", active: false, path: "/notifications" },
+    { icon: Settings, label: "Settings", active: false, path: "/settings" },
   ];
 
   return (
@@ -15,6 +18,7 @@ const BottomNavigation = () => {
           return (
             <button
               key={index}
+              onClick={() => item.path && navigate(item.path)}
               className="flex flex-col items-center gap-1 py-2 px-4 rounded-lg transition-colors duration-200 hover:bg-ocean-surface"
             >
               <Icon 
