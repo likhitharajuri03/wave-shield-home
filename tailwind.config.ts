@@ -22,6 +22,13 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
+        },
+        ocean: {
+          deep: "hsl(var(--ocean-deep))",
+          blue: "hsl(var(--ocean-blue))",
+          light: "hsl(var(--ocean-light))",
+          surface: "hsl(var(--ocean-surface))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,6 +64,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-ocean': 'var(--gradient-ocean)',
+        'gradient-wave': 'var(--gradient-wave)',
+      },
+      boxShadow: {
+        'ocean': 'var(--shadow-ocean)',
+        'wave': 'var(--shadow-wave)',
       },
       borderRadius: {
         lg: "var(--radius)",
